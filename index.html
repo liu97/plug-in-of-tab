@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/tab.css">
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="js/tab.js"></script>
+</head>
+<body>
+	<div class="tab js-tab">
+		<ul class="tab-nav">
+			<li class="actived"><a href="javascript:void(0);">图片一</a></li>
+			<li><a href="javascript:void(0);">图片二</a></li>
+			<li><a href="javascript:void(0);">图片三</a></li>
+			<li><a href="javascript:void(0);">图片四</a></li>
+		</ul>
+		<div class="content-warp">
+			<div class="content-item current"><img src="images/1.jpg"></div>
+			<div class="content-item"><img src="images/2.jpg"></div>
+			<div class="content-item"><img src="images/3.jpg"></div>
+			<div class="content-item"><img src="images/4.jpg"></div>
+		</div>	
+	</div>
+	<div class="tab js-tab" data-config='{
+							"triggerType":"click",
+							"effect"     :"fade",
+							"auto"       :3000
+									}'>
+		<ul class="tab-nav">
+			<li class="actived"><a href="javascript:void(0);">图片一</a></li>
+			<li><a href="javascript:void(0);">图片二</a></li>
+			<li><a href="javascript:void(0);">图片三</a></li>
+		</ul>
+		<div class="content-warp">
+			<div class="content-item current"><img src="images/1.jpg"></div>
+			<div class="content-item"><img src="images/2.jpg"></div>
+			<div class="content-item"><img src="images/3.jpg"></div>
+		</div>	
+	</div>
+	<div class="tab js-tab" data-config='{
+							"triggerType":"click",
+							"effect"     :"fade",
+							"invoke"     :2									}'>
+		<ul class="tab-nav">
+			<li class="actived"><a href="javascript:void(0);">图片一</a></li>
+			<li><a href="javascript:void(0);">图片二</a></li>
+			<li><a href="javascript:void(0);">图片三</a></li>
+		</ul>
+		<div class="content-warp">
+			<div class="content-item current"><img src="images/1.jpg"></div>
+			<div class="content-item"><img src="images/2.jpg"></div>
+			<div class="content-item"><img src="images/3.jpg"></div>
+		</div>	
+	</div>
+	<script type="text/javascript">
+		$(function(){
+
+			$(".js-tab").tab();
+		});
+	</script>
+</body>
+</html>
